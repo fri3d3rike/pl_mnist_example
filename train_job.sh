@@ -23,7 +23,7 @@ datadir=/home/koertefr/scratch/data
 # datadir=$SLURM_TMPDIR
 
 tensorboard --logdir=${logdir}/lightning_logs --host 0.0.0.0 --load_fast false & \
-    python ./pl_mnist_example/train.py \
+    python ./train.py \
     --model Conv \
     --dataloader MNIST \
     --batch_size 32 \

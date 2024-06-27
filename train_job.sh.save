@@ -11,7 +11,7 @@ pwd
 nvidia-smi
 
 # Load needed python and cuda modules
-module load StdEnv/2020
+
 module load python/3.8.2 cuda cudnn
 
 # Activate your enviroment

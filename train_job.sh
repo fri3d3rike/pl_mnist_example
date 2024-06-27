@@ -15,15 +15,15 @@ module load StdEnv/2020
 module load python/3.8.2 cuda cudnn
 
 # Activate your enviroment
-source ./pl_mnist_example/env/hello/bin/activate
+source ~/projects/def-hjabbari-ab/koertefr/pl_mnist_example/env/hello/bin/activate
 
 # Variables for readability
-logdir=/home/koertefr/scratch/saved
-datadir=/home/koertefr/scratch/data
+logdir=~/scratch/saved
+datadir=~/scratch/data
 # datadir=$SLURM_TMPDIR
 
 tensorboard --logdir=${logdir}/lightning_logs --host 0.0.0.0 --load_fast false & \
-    python ./train.py \
+    python ~/projects/def-hjabbari-ab/koertefr/pl_mnist_example/train.py \
     --model Conv \
     --dataloader MNIST \
     --batch_size 32 \
